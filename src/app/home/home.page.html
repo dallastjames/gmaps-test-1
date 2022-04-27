@@ -1,8 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title> Blank </ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -14,7 +12,18 @@
   </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <capacitor-google-map #mapRef></capacitor-google-map>
+    <ion-button color="info" type="button" (click)="createMap(mapRef)">
+      Create Map
+    </ion-button>
+    <ion-button color="primary" type="button" (click)="addMarker()">
+      Add Marker
+    </ion-button>
+    <ion-button color="secondary" type="button" (click)="moveMap()">
+      Move Map
+    </ion-button>
+    <ion-button color="success" type="button" (click)="moveMarker()">
+      Move Marker
+    </ion-button>
   </div>
 </ion-content>
